@@ -1,0 +1,45 @@
+
+  <!-- Page container -->
+  <div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+      <!-- Page header -->
+      <div class="page-header">
+        <div class="page-title">
+          <h3>Posts<small>View, vote, and comment on posts from our members</small></h3>
+        </div>
+      </div>
+      <!-- /page header -->
+
+      <%= erb :'partials/_newpost' if @user %>
+
+      <div class="tabbable page-tabs">
+                      <ul class="nav nav-tabs">
+                          <li class="active"><a href="#all-posts" data-toggle="tab"><i class="icon-paragraph-justify2"></i> All Posts</a></li>
+                          <li class=""><a href="#newest-posts" data-toggle="tab"><i class="icon-stack"></i> Newest Post</a></li>
+
+                      </ul>
+
+                      <div class="tab-content">
+
+                          <!-- First tab -->
+                          <div class="tab-pane fade active in" id="all-posts">   
+                            <%= erb :'partials/_posts' %>  
+                          </div>
+                          <!-- /first tab -->
+
+                          <!-- Second tab -->
+                          <div class="tab-pane fade" id="newest-posts">   
+                          <p>Who is the man now dog</p>         
+                          </div>
+                          <!-- /Second tab -->
+                      </div>
+                  </div>
+
+    </div>
+    <!-- /page content -->
+
+
+  </div>
+  <!-- /content -->

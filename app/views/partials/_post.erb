@@ -1,0 +1,19 @@
+
+  <!-- Page container -->
+  <div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+      <!-- Page header -->
+      <div class="page-header">
+        <div class="page-title">
+          <h5><%= @post.title %><small>Posted by <%= @post.user.username %></small></h5>
+        </div>
+        
+      </div>
+      <!-- /page header -->
+
+  <%= erb :'partials/_comments' %>
+
+  </div>
+  <!-- /content -->

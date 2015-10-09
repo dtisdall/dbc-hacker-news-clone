@@ -1,0 +1,13 @@
+
+          <!-- Recent activity -->
+      <div class="block">
+        <% @posts.each do | post| %>
+        <h5><%= post.title %></h5>
+        <ul class="headline-info">
+          <li>By: <a href="/users/<%= post.user.username %>"></a><%= post.user.username %></li>
+          <li>On: <%= post.created_at %></li>
+          <li><a href="/posts/<%= post.id %>">Comments: <%= post.comments.count %></a></li>
+        </ul>   
+          <% end %>
+          </div>
+          <!-- /recent activity -->

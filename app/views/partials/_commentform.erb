@@ -1,0 +1,18 @@
+<div class="block">
+  <h6><i class="icon-bubble-plus"></i> Add comment</h6>
+  <div class="well">
+    <form role="form" action="/comments" method="post">
+      <input type="hidden" name="post_id" value="<%= @post.id %>">
+      <% if defined?(parent) %>
+        <input type="hidden" name="parent_id" value="<%= parent %>">
+      <% end %>  
+      <div class="form-group">
+        <label>New comment:</label>
+        <textarea name="text" rows="5" cols="5" placeholder="Your comment..." class="elastic form-control" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 102px;"></textarea>
+      </div>
+                  <div class="form-actions text-right">
+                    <input type="submit" value="Add comment" class="btn btn-primary">
+                  </div>
+    </form>
+  </div>
+</div>

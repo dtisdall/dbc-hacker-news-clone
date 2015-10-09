@@ -1,0 +1,15 @@
+<%= erb :'partials/_commentform' if @user %>
+
+<h6 class="heading-hr"><i class="icon-bubble"></i> Comments</h6>
+
+
+<div class="block">
+
+<% @post.comments.where(parent: nil).each do |comment| %>
+<%= erb :'partials/_showcomment', locals: {comment: comment} %>
+<% end %>
+
+</div>    
+
+          
+          

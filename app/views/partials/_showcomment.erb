@@ -1,0 +1,22 @@
+  <div class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object" src="<%= comment.user.gravatar %>" alt="">
+    </a>
+    <div class="media-body">
+      <a href="/users/<%= comment.user.username %>" class="media-heading"><%= comment.user.display_name %></a>
+      <ul class="headline-info">
+        <li><a href="#">Reply</a></li>
+      </ul>
+      <%= comment.text %>
+      <div class="reply-form media-body">
+        <% erb :'partials/_commentform', locals: {parent: comment.id} %>
+      </div>
+
+
+  <% comment.replies.each do | reply | %>
+  <%= erb :'partials/_showcomment', locals: {comment: reply} %>
+  <% end %>
+      </div>
+  </div>
+
+

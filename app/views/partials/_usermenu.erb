@@ -1,0 +1,14 @@
+<% if @user %>
+<li class="user dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown">
+    <img src="<%= @user.gravatar %>" alt="">
+    <span><%= @user.display_name %></span>
+    <i class="caret"></i>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right icons-right">
+    <li><a href="/logout"><i class="icon-exit"></i> Logout</a></li>
+  </ul>
+</li>
+<% else %>
+<li><a href="/login"><i class="icon-key"></i> Login</a></li>
+<% end %>
